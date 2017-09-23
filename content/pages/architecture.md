@@ -250,11 +250,11 @@ Logical or.  Performs a logical or operation on the contents of registers `$rA` 
  
 
 ## <table width='100%'><tr><td>`pop`</td><td align='right'>`00000111AAAABBBB`</td></tr></table>
-Pop the 32-bit contents of the top of the stack pointed to by `$rB` into `$rA` and update the stack pointer.  Stacks grown down.
+Pop the 32-bit contents of the top of the stack pointed to by `$rA` into `$rB` and update the stack pointer in `$rA`.  Stacks grown down.
  
 
 ## <table width='100%'><tr><td>`push`</td><td align='right'>`00000110AAAABBBB`</td></tr></table>
-Push the contents of `$rB` onto a stack pointed to by `$rA` and update the stack pointer.  Stacks grown down.
+Push the contents of `$rB` onto a stack pointed to by `$rA` and update the stack pointer in `$rA`.  Stacks grown down.
  
 
 ## <table width='100%'><tr><td>`ret`</td><td align='right'>`00000100xxxxxxxx`</td></tr></table>
