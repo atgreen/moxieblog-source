@@ -1,5 +1,5 @@
 Title: Toolchain
-Date: 2015-01-29 06:38
+Date: 2017-08-27 07:53
 Author: admin
 Status: hidden
 Slug: toolchain
@@ -16,43 +16,58 @@ The toolchain for the moxie architecture consists of the following tools:
 
 Supported target triplets include moxie-elf, moxie-rtems (for
 [RTEMS](http://rtems.org) application development), and moxiebox (a
-special purpose configuration for the
-[moxiebox](http://github.com/jgarzik/moxiebox) bitcoin oracle
+special purpose configuration for [Bloq](http://bloq.com)'s
+[Ora](https://github.com/bloq/ora) bitcoin oracle
 project).
 
 # Getting and Building the Tools
 
 ## Binary Distributions
 
-Signed packages for moxie-elf, moxie-rtems and moxiebox are available
-for Fedora, CentOS and RHEL.  Simply download and install the
-appropriate repo package below:
+64-bit x86 DEB and RPM Linux packages for moxie-elf, moxie-rtems and
+moxiebox tools are available for download.  The toolchains are
+statically linked, and should run on a wide range of distributions,
+including Ubuntu, Debian, Fedora, CentOS, RHEL, and more.  These
+binaries track upstream development branches and are updated
+frequently.
 
-* [Fedora 20 x86_64](http://184.106.241.209/yum/MoxieLogic/f20/RPMS/noarch/moxielogic-repo-f20-1-5.noarch.rpm)
-* [Fedora 21 x86_64](http://184.106.241.209/yum/MoxieLogic/f21/RPMS/noarch/moxielogic-repo-f21-1-5.noarch.rpm)
-* [CentOS/RHEL 6](http://184.106.241.209/yum/MoxieLogic/el6/RPMS/noarch/moxielogic-repo-el6-1-5.noarch.rpm)
-* [CentOS/RHEL 7](http://184.106.241.209/yum/MoxieLogic/el7/RPMS/noarch/moxielogic-repo-el7-1-5.noarch.rpm)
+### RPM Packages
 
-The fingerprint for the signing key is `1D94 EA73 7436 1929 B906  804C 89D7 255C BFE9 22AD`.
+For RPMs, simply download and install the repo package here:  [http://repos.moxielogic.org:7007/MoxieLogic/noarch/moxielogic-repo-latest.rpm](http://repos.moxielogic.org:7007/MoxieLogic/noarch/moxielogic-repo-latest.rpm)
 
 Example usage:
 
-    $ rpm -ivh http://184.106.241.209/yum/MoxieLogic/el7/RPMS/noarch/moxielogic-repo-el7-1-5.noarch.rpm
-    $ yum install -y moxielogic-moxiebox-gcc moxielogic-moxiebox-newlib moxielogic-moxiebox-gdb
+    $ rpm -ivh http://repos.moxielogic.org:7007/MoxieLogic/noarch/moxielogic-repo-latest.rpm
+    $ yum install -y moxielogic-moxiebox-gcc moxielogic-moxiebox-gdb
     $ /opt/moxielogic/bin/moxiebox-gcc 
-    moxie-elf-gcc: fatal error: no input files
+    moxiebox-gcc: fatal error: no input files
     compilation terminated.
 
+### DEB Packages
+
+For DEBs, simply add the apt repo to your system, like so:
+
+    $ apt-add-repository http://repos.moxielogic.org:7114/MoxieLogic moxiedev main
+
+Example usage:
+
+    $ apt-add-repository http://repos.moxielogic.org:7114/MoxieLogic moxiedev main
+    $ apt-get install -y moxielogic-moxiebox-gcc moxielogic-moxiebox-gdb
+    $ /opt/moxielogic/bin/moxiebox-gcc 
+    moxiebox-gcc: fatal error: no input files
+    compilation terminated.
 
 ## Source Distributions
 
-The [moxie-cores](http://github.com/atgreen/moxie-cores) project
-provides scripts to download and build the toolchain on Linux hosts.
-See the tools directory for the
-[download](https://raw.githubusercontent.com/atgreen/moxie-cores/master/tools/download-tools-sources.sh)
-and
-[build](https://raw.githubusercontent.com/atgreen/moxie-cores/master/tools/build-elf-tools.sh)
-scripts.
+The [moxiedev-releng](http://github.com/atgreen/moxiedev-releng) git
+repo provides scripts and tools required to rebuild these binaries
+from source.
+
+The RPM repo includes source RPMs from which all of the tools are
+built.  The DEB packages are converted from RPM using
+[alien](https://en.wikipedia.org/wiki/Alien_(software)).
+
+
 
 
 
