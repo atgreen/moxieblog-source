@@ -45,7 +45,7 @@ In addition, there are a number of special registers whose values are accessible
 <center>
 <table>
 <tr><th>Special Register</th><th>Description</th></tr>
-<tr><td>0</td><td>status regsiter with the following bit values:</td></tr>
+<tr><td>0</td><td>status register with the following bit values:</td></tr>
 <tr><td>1</td><td>a pointer to the Exception Handler routine (invoked by <code>swi</code>, IRQs, Divide by Zero and illegal instructions (<code>bad</code>))</td></tr>
 <tr><td>2</td><td>upon invocation of the Excecption Handler (see above), special register 2 will have one of four values..</td></tr>
 <tr><td>3</td><td>the <code>swi</code> request number (by convention)</td></tr>
