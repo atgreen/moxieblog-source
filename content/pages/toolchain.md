@@ -11,12 +11,12 @@ The toolchain for the moxie architecture consists of the following tools:
 * the GNU assembler, linker and binary utilities
 * GCC, the GNU Compiler Collection
 * GDB, the GNU Debugger, including a port of the GDB simulator to the moxie architecture
-* [QEMU](http://qemu.org), the Open Source Processor Emulator
+* [QEMU](https://qemu.org), the Open Source Processor Emulator
 * Newlib, a C library for bare-metal embedded software development
 
 Supported target triplets include moxie-elf, moxie-rtems (for
-[RTEMS](http://rtems.org) application development), and moxiebox (a
-special purpose configuration for [Bloq](http://bloq.com)'s
+[RTEMS](https://rtems.org) application development), and moxiebox (a
+special purpose configuration for [Bloq](https://bloq.com)'s
 [Ora](https://github.com/bloq/ora) bitcoin oracle
 project).
 
@@ -33,11 +33,11 @@ frequently.
 
 ### RPM Packages
 
-For RPMs, simply download and install the repo package here:  [http://repos.moxielogic.org:7007/MoxieLogic/noarch/moxielogic-repo-latest.rpm](http://repos.moxielogic.org:7007/MoxieLogic/noarch/moxielogic-repo-latest.rpm)
+For RPMs, simply download and install the repo package here:  [https://repos.moxielogic.org:7007/MoxieLogic/noarch/moxielogic-repo-latest.rpm](https://repos.moxielogic.org:7007/MoxieLogic/noarch/moxielogic-repo-latest.rpm)
 
 Example usage:
 
-    $ rpm -ivh http://repos.moxielogic.org:7007/MoxieLogic/noarch/moxielogic-repo-latest.rpm
+    $ rpm -ivh https://repos.moxielogic.org:7007/MoxieLogic/noarch/moxielogic-repo-latest.rpm
     $ yum install -y moxielogic-moxiebox-gcc moxielogic-moxiebox-gdb
     $ /opt/moxielogic/bin/moxiebox-gcc 
     moxiebox-gcc: fatal error: no input files
@@ -47,11 +47,11 @@ Example usage:
 
 For DEBs, simply add the apt repo to your system, like so:
 
-    $ apt-add-repository http://repos.moxielogic.org:7114/MoxieLogic moxiedev main
+    $ apt-add-repository https://repos.moxielogic.org:7114/MoxieLogic moxiedev main
 
 Example usage:
 
-    $ apt-add-repository http://repos.moxielogic.org:7114/MoxieLogic moxiedev main
+    $ apt-add-repository https://repos.moxielogic.org:7114/MoxieLogic moxiedev main
     $ apt-get install -y moxielogic-moxiebox-gcc moxielogic-moxiebox-gdb
     $ /opt/moxielogic/bin/moxiebox-gcc 
     moxiebox-gcc: fatal error: no input files
@@ -59,7 +59,7 @@ Example usage:
 
 ## Source Distributions
 
-The [moxiedev-releng](http://github.com/atgreen/moxiedev-releng) git
+The [moxiedev-releng](https://github.com/atgreen/moxiedev-releng) git
 repo provides scripts and tools required to rebuild these binaries
 from source.
 
