@@ -33,11 +33,11 @@ frequently.
 
 ### RPM Packages
 
-For RPMs, simply download and install the repo package here:  [https://repos.moxielogic.org:7007/MoxieLogic/noarch/moxielogic-repo-latest.rpm](https://repos.moxielogic.org:7007/MoxieLogic/noarch/moxielogic-repo-latest.rpm)
+For RPMs, simply download and install the repo package here:  [https://repos.moxielogic.org:7007/MoxieLogic/noarch/moxielogic-repo-latest.noarch.rpm](https://repos.moxielogic.org:7007/MoxieLogic/noarch/moxielogic-repo-latest.noarch.rpm)
 
 Example usage:
 
-    $ rpm -ivh https://repos.moxielogic.org:7007/MoxieLogic/noarch/moxielogic-repo-latest.rpm
+    $ rpm -ivh https://repos.moxielogic.org:7007/MoxieLogic/noarch/moxielogic-repo-latest.noarch.rpm
     $ yum install -y moxielogic-moxiebox-gcc moxielogic-moxiebox-gdb
     $ /opt/moxielogic/bin/moxiebox-gcc 
     moxiebox-gcc: fatal error: no input files
